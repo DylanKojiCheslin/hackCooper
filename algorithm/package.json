@@ -1,0 +1,23 @@
+{
+  "name": "hackcooper",
+  "version": "1.0.0",
+  "description": "Monitors Twitter for new hackathons",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhinavMadahar/hackCooper.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AbhinavMadahar/hackCooper/issues"
+  },
+  "homepage": "https://github.com/AbhinavMadahar/hackCooper#readme",
+  "dependencies": {
+    "command-line-args": "^3.0.1",
+    "twitter": "^1.4.0"
+  }
+}
