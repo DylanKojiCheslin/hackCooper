@@ -31,7 +31,7 @@
         </div>
 
         <form method="get" action="/search" id="searchbox5">
-            <input id="search52" name="q" type="text" size="40" placeholder="Search-A-Hack..." style="text-align: center"/>
+            <input name="q" type="text" size="40" placeholder="Search-A-Hack..." style="text-align: center"/>
         </form>
 
     </div>
@@ -42,6 +42,7 @@
 
         <div id="hack-container" class="hackathon-display">
 
+            <!--
             <div class="hackathons-view" onClick="getHackathons()">
 
                 <div id="name">
@@ -64,22 +65,38 @@
                     </p>
 
                 </div>
+               -->
 
-            </div>
         </div>
-
     </div>
 
-    <!-- script section -->
-    <script>
+</div>
 
-        var viewTitles = ["name", "date", "location", "popularity", "icon"];
+<div id="startLat">
+    <p></p>
+</div>
 
-        //Create array of options to be added
-        var hacks = 3;
+<div id="startLon">
+    <p></p>
+</div>
+<!-- script section -->
+<!--   <script>
 
-        //
-        //for (var i = 0; i < viewTitles.length; i++) {          var newDiv = document.createElement('div');        myDiv.appendChild(para);  }
-    </script>
+        window.onload = function () {
+            var startPos;
+            var geoSuccess = function (position) {
+                startPos = position;
+                document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+                document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+            };
+            var geoError = function (error) {
+                console.log('Error occurred. Error code: ' + error.code);
+                // error.code can be:   0: unknown error   1: permission denied   2: position unavailable (error response from location provider)   3: timed out
+            };
+            navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+        };
+    </script>-->
+
+<script></script>
 
 </div>
