@@ -3,7 +3,11 @@
 const request = require("request");
 
 const findIfHackathon = (event, context, callback) => {
-	const name = event.name;
+	if (!event.queryParams.name) {
+		callback("Missing name parameter");
+		return;
+	}
+	const name = event.queryParams.name.replace(/%20/g, " ");
 
 	if (["hackathon", "hack"].indexOf(name) !== -1) {
 		callback(null, { isHackathon: false, name });
@@ -13,6 +17,7 @@ const findIfHackathon = (event, context, callback) => {
 	request(`https://www.google.com/search?q=${name}`, (error, code, page) => {
 		if (error) {
 			console.log(error);
+			callback(error, { error });
 			return;
 		}
 
@@ -30,6 +35,7 @@ const findIfHackathon = (event, context, callback) => {
 		const isHackathon = mentionsNameOften && mentionsHackathonOften;
 
 		callback(null, { isHackathon, name });
+		context.done();
 	});
 };
 
