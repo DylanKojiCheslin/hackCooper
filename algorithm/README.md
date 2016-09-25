@@ -19,9 +19,9 @@ node . \
 {
 	"hackathons": [{
 		"name": "PennApps XII",
-		"month": "October",
-		"day": "12",
-		"year": "2017",
+		"month": 11,
+		"day": 12,
+		"year": 2017,
 		"location": "University of Pennsylvania",
 		"popularity": 100
 	}]
