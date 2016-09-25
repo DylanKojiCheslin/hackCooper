@@ -6,8 +6,15 @@
 
 html
  font-family: 'Josefin Sans', sans-serif
- background-color: #DCC6E0
+ background-color: #89C4F4
+ background: url("330H.jpg") no-repeat center center
+ background-size: cover
  overflow: hidden
+ display: flex
+ align-items: center
+ justify-content: center
+ flex-direction: column
+
 
 .nav
  font-size: 40px
@@ -37,29 +44,117 @@ html
  align-items: center
  justify-content: center
  overflow-x: scroll
- border: 1px solid green
+ -webkit-box-shadow: 0 10px 6px -6px #777
+ -moz-box-shadow: 0 10px 6px -6px #777
+ box-shadow: 0 10px 6px -6px #777
+ background-color: rgba(0,0,0,0.2)
 
-
-.hackathon-display
- width: 80%
- display: flex
- align-items: center
- flex-direction: column
+ .hackathon-display
+  margin-top: auto
+  width: 80%
+  display: flex
+  align-items: center
+  flex-direction: column
 
 // displays start
-.search-box
- border: 1px red dashed
+#searchbox5
+ width: 200px
+ margin: 0 auto
+ padding: 50px 0 30px
+
+#search5:focus
+ width: 200px
+ outline: 0
+ border: 1px solid #d1d1d1
+ font: bold 12px Arial, Helvetica, Sans-serif
+ color: #777
+ width: 150px
+ padding: 6px 15px 6px 35px
+ text-shadow: 0 2px 2px rgba(0,0,0,0.3)
+ box-shadow: 0 1px 0 rgba(255,255,255,0.1), 0 1px 3px rgba(0,0,0,0.2) inset
+ -webkit-transition: all 0.7s ease 0s
+
 
 .image-box
  height: 100px
  width: 100px
+ border-radius: 50%
+
+.image-box:hover
+ cursor: pointer
+
+a
+ display: flex
  margin: 25px
- border: 1px green dashed
+ height: 100px
+ width: 100px
+ border-radius: 50%
+
+a:hover
+ opacity: 0.45
+
+
+#img1
+ background: url("alexa.png") no-repeat center center
+ background-size: cover
+
+#img2
+ background: url("hackcoop.jpg") no-repeat center center
+ background-size: cover
+
+#img3
+ background: url("noisehack.png") no-repeat center center
+ background-size: cover
+
+#img4
+ background: url("masseyhacks.png") no-repeat center center
+ background-size: cover
 
 .hackathons-view
+ display: flex
+ flex-direction: row
+ justify-content: space-between
  margin: 20px
  height: 50px
  width: 95%
- border: 1px green dashed
+ color: white
+ background-color: #34495E
+
+ #name
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-top: auto
+  color: #446CB3
+  height: inherit
+  width: 100px
+  text-align: center
+  border-right: 1px black solid
+
+ #date
+  padding: 0 10px
+  margin: 0 10px
+  border-right: 1px grey solid
+
+ #location
+  padding: 0 10px
+  margin: 0 10px
+  border-right: 1px grey solid
+
+ #popularity
+  text-align: center
+  margin: 0 10px
+  padding: 0 10px
+  float: right
+
+  p
+   margin: auto 0
+
+
+
+
+
+
+
 
 //displays end
