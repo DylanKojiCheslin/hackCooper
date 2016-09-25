@@ -1,9 +1,27 @@
 const fs = require("fs");
 const nlp = require("nlp_compromise");
 const mongoose = require("mongoose");
+const request = require("request");
 const Tweet = require("../models/Tweet");
 const Hackathon = require("../models/Hackathon");
-const isHackathon = require("./isHackathon");
+
+const isHackathon = (name, ifIsHackathon, ifIsNotHackathon) => request(
+	`https://kmk26hrd6j.execute-api.us-east-1.amazonaws.com/prod/isHackathon?name=${name}`,
+	(error, code, result) => {
+		if (error) {
+			console.log(error);
+			return;
+		}
+
+		try {
+			if (JSON.parse(result).isHackathon && ifIsHackathon) {
+				ifIsHackathon(name);
+			} else if (ifIsNotHackathon) {
+				ifIsNotHackathon(name);
+			}
+		} catch (exception) {}
+	}
+);
 
 mongoose.connect('mongodb://localhost/hackafind');
 
@@ -22,10 +40,4 @@ Tweet.find({}).then((tweets) => {
 
 	const popularity = (name) => hackathonNames
 		.reduce((count, hackathon) => hackathon === name ? count + 1 : count, 0);
-
-	const save = name => Hackathon.create({
-		name,
-		popularity: popularity(name),
-		tweets: []
-	});
 });
