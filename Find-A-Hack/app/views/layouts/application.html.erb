@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Hackafind</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <head>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIjOJzR0pqvMwvP8i8qL7f19TyKbVa-24&v=3&libraries=geometry"></script>
 
-<%= yield %>
+        <title>
+            Find-A-Hack</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
 
-</body>
+        <%= yield %>
+
+    </body>
 </html>
