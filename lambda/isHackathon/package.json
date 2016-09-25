@@ -1,0 +1,17 @@
+{
+  "name": "is-hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "zip": "zip -r isHackathon.zip .",
+    "deploy": "aws lambda update-function-code --function-name isHackathon --zip-file fileb://./isHackathon.zip"
+  },
+  "author": "Abhinav Madahar",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "request": "^2.75.0"
+  }
+}
