@@ -2,7 +2,7 @@
   "name": "hackcooper",
   "version": "1.0.0",
   "description": "Monitors Twitter for new hackathons",
-  "main": "collect.js",
+  "main": "src/collect.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +18,9 @@
   "homepage": "https://github.com/AbhinavMadahar/hackCooper#readme",
   "dependencies": {
     "command-line-args": "^3.0.1",
+    "mongoose": "^4.6.1",
     "nlp_compromise": "^6.5.0",
+    "request": "^2.75.0",
     "twitter": "^1.4.0"
   }
 }
