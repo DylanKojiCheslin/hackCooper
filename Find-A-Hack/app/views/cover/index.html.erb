@@ -1,58 +1,85 @@
 <div class="wrapper">
 
- <div class="nav">
-  ☼ Find-A-Hack
- </div>
+    <div class="nav">
+        ☼ Find-A-Hack
+    </div>
 
- <div class="featured-hacks">
+    <div class="featured-hacks">
 
-  <h1>
-   Featureds Hacks
-  </h1>
+        <h1>
+            Featureds Hacks
+        </h1>
 
-  <div class="scroller">
+        <div class="scroller">
 
-   <div class="image-box"></div>
-   <div class="image-box"></div>
-   <div class="image-box"></div>
-   <div class="image-box"></div>
+            <a href="#">
+                <div class="image-box" id="img1"></div>
+            </a>
 
-  </div>
+            <a href="#">
+                <div class="image-box" id="img2"></div>
+            </a>
 
-  <div id="search-box" class="mobile-form">
-   <form action="/search" class="search-form" id="searchform" method="get">
-    <span id="noEasy"><input class="sb-search-submit" type="submit" value="">
-     <span class="sb-icon-search"></span>
-    </span>
-    <input
-     id="sbox"
-     name="q"
-     onblur="if (this.placeholder == '') {this.placeholder = 'To search type + hit enter';}"
-     onfocus="if (this.placeholder == 'To search type + hit enter') {this.placeholder = '';}"
-     placeholder="To search type + hit enter"
-     type="text"
-     x-webkit-speech="">
-   </form>
-  </div>
- </div>
+            <a href="#">
+                <div class="image-box" id="img3"></div>
+            </a>
 
- <!-- next section -->
+            <a href="#">
+                <div class="image-box" id="img4"></div>
+            </a>
 
- <div class="hackathon-wrapper">
+        </div>
 
-  <div class="hackathon-display">
+        <form method="get" action="/search" id="searchbox5">
+            <input id="search52" name="q" type="text" size="40" placeholder="Search-A-Hack..." style="text-align: center"/>
+        </form>
 
-   <div class="hackathons-view"></div>
-   <div class="hackathons-view"></div>
-   <div class="hackathons-view"></div>
-   <div class="hackathons-view"></div>
-   <div class="hackathons-view"></div>
-   <div class="hackathons-view"></div>
-   <div class="hackathons-view"></div>
-   <div class="hackathons-view"></div>
+    </div>
 
-  </div>
+    <!-- next section -->
 
- </div>
+    <div class="hackathon-wrapper">
+
+        <div id="hack-container" class="hackathon-display">
+
+            <div class="hackathons-view" onClick="getHackathons()">
+
+                <div id="name">
+                    Hack-Cooper
+                </div>
+
+                <div id="date">
+                    <p id="month-day-year">September 25, 2016</p>
+                </div>
+
+                <div id="location">
+                    <p>The Cooper Union</p>
+                </div>
+
+                <div id="popularity">
+
+                    <p id="icon">★</p>
+                    <p>
+                        100
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- script section -->
+    <script>
+
+        var viewTitles = ["name", "date", "location", "popularity", "icon"];
+
+        //Create array of options to be added
+        var hacks = 3;
+
+        //
+        //for (var i = 0; i < viewTitles.length; i++) {          var newDiv = document.createElement('div');        myDiv.appendChild(para);  }
+    </script>
 
 </div>
