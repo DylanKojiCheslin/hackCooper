@@ -1,2 +1,58 @@
-<h1>Cover#index</h1>
-<p>Find me in app/views/cover/index.html.erb</p>
+<div class="wrapper">
+
+ <div class="nav">
+  ☼ HackaFIND
+ </div>
+
+ <div class="featured-hacks">
+
+  <h1>
+   Featureds Hacks
+  </h1>
+
+  <div class="scroller">
+
+   <div class="image-box"></div>
+   <div class="image-box"></div>
+   <div class="image-box"></div>
+   <div class="image-box"></div>
+
+  </div>
+
+  <div id="search-box" class="mobile-form">
+   <form action="/search" class="search-form" id="searchform" method="get">
+    <span id="noEasy"><input class="sb-search-submit" type="submit" value="">
+     <span class="sb-icon-search"></span>
+    </span>
+    <input
+     id="sbox"
+     name="q"
+     onblur="if (this.placeholder == '') {this.placeholder = 'To search type + hit enter';}"
+     onfocus="if (this.placeholder == 'To search type + hit enter') {this.placeholder = '';}"
+     placeholder="To search type + hit enter"
+     type="text"
+     x-webkit-speech="">
+   </form>
+  </div>
+ </div>
+
+ <!-- next section -->
+
+ <div class="hackathon-wrapper">
+
+  <div class="hackathon-display">
+
+   <div class="hackathons-view"></div>
+   <div class="hackathons-view"></div>
+   <div class="hackathons-view"></div>
+   <div class="hackathons-view"></div>
+   <div class="hackathons-view"></div>
+   <div class="hackathons-view"></div>
+   <div class="hackathons-view"></div>
+   <div class="hackathons-view"></div>
+
+  </div>
+
+ </div>
+
+</div>
